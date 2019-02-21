@@ -95,9 +95,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+/*Large Background Image*/
 html {
-  background-color: #222222;
+  background-color: #222;
   height: 100%;
   width: 100%;
 }
@@ -110,8 +110,20 @@ body {
   height: 100%;
 }
 
+header {
+  display: flex;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
 .wrapper {
-  /*add display:flex and set justify-content to space-between*/
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -119,16 +131,22 @@ body {
 }
 
 .div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   line-height: 1.5em;
   font-size: 1.25em;
+  /* width: 30%; */
   height: auto;
-  width: 30%;
 }
+
+.wrapper span {
+  font-family: 'Lora', sans-serif;
+  font-size: 1.3em;
+}
+
+
 
 
 /* ==========================================================================
@@ -171,8 +189,8 @@ body {
     height: auto;
     margin: 0;
     overflow: visible;
-    position: absolute;
-    width: 1px;
+    position: static;
+    width: auto;
 }
 
 /*
@@ -210,6 +228,29 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media all and (min-width: 1200px) {
+    .div-1, .div-2, .div-3 {
+      flex-basis: 30%;
+    }
+
+    .header, .main {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .wrapper {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-top: 2px solid #555;
+      border-bottom: 2px solid #555;
+    }
+
+    .div-1, .div-2 {
+      border-right: 1px solid #555;
+      padding-right: 30px;
+    }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
